@@ -1,9 +1,19 @@
-import { VStack, Flex, Heading, IconButton, useColorMode, Text, Button, Spacer } from '@chakra-ui/react'
+import { VStack, Flex, Heading, IconButton, useColorMode, Text, Button, Spacer, useDisclosure } from '@chakra-ui/react'
+import {
+    Drawer,
+    DrawerBody,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    Box,
+  } from '@chakra-ui/react'
 import React from 'react'
 import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin,FaArrowAltCircleDown,FaBars } from "react-icons/fa"
 
 const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const firstField = React.useRef()
     const isDark = colorMode === "dark"
 
     return (
@@ -12,12 +22,12 @@ const Header = () => {
                 <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
                     <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
                     <Flex width={["70%","70%","65%","60%","50%"]} justifyContent={"space-between"} alignItems={'center'} color="purple.500" fontWeight="bold">
-                        <Text>HOME</Text>
-                        <Text>ABOUT ME</Text>
-                        <Text>SKILLS</Text>
-                        <Text>PROJECTS</Text>
-                        <Text>CONTACT</Text>
-                        <Button as={'b'}><Flex alignItems={'center'} gap="1">RESUME <FaArrowAltCircleDown/></Flex></Button>
+                        <Text _hover={{cursor:"pointer"}} >HOME</Text>
+                        <Text _hover={{cursor:"pointer"}} >ABOUT ME</Text>
+                        <Text _hover={{cursor:"pointer"}} >SKILLS</Text>
+                        <Text _hover={{cursor:"pointer"}} >PROJECTS</Text>
+                        <Text _hover={{cursor:"pointer"}} >CONTACT</Text>
+                        <Button _hover={{cursor:"pointer"}}  as={'b'}><Flex alignItems={'center'} gap="1">RESUME <FaArrowAltCircleDown/></Flex></Button>
                         <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
                     </Flex>
                 </Flex>
@@ -26,13 +36,39 @@ const Header = () => {
                 <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
                     <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
                     <Flex w="100px" color="purple.500">
-                    <Button><FaBars/></Button>
+                    <Button onClick={onOpen}><FaBars/></Button>
                     <Spacer></Spacer>
                     <IconButton color="purple.500" icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
                     </Flex>
                 </Flex>
             </VStack>
-           
+            <Drawer
+        isOpen={isOpen}
+        placement='right'
+        initialFocusRef={firstField}
+        onClose={onClose}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <Box p="40px" color="#805AD5">
+            <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">HOME</Text></Box>
+            <hr/>
+            <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">ABOUT ME</Text></Box>
+            <hr/>
+            <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">SKILLS</Text></Box>
+            <hr/>
+            <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">PROJECTS</Text></Box>
+            <hr/>
+            <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">CONTACT</Text></Box>
+            <hr/>
+            <Box m="5px" pl="10px"><Flex _hover={{cursor:"pointer"}} alignItems={'center'} gap="1"><Text as="b">RESUME</Text> <FaArrowAltCircleDown/></Flex></Box>
+            <hr/>
+          </Box>
+          <DrawerBody>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
         </>
     )
 }
