@@ -7,18 +7,24 @@ import {
     DrawerCloseButton,
     Box,
   } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin,FaArrowAltCircleDown,FaBars } from "react-icons/fa"
-
+import About from './About'
+import { ThemeContext } from '../context/Context'
 const Header = () => {
+    const {maintainTheme}=useContext(ThemeContext)
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure()
     const firstField = React.useRef()
     const isDark = colorMode === "dark"
+    const handleClick=()=>{
+      toggleColorMode()
+      maintainTheme(isDark)
+    }
 
     return (
         <>
-            <VStack display={{"2xl":"flex",xl:"flex",lg:"flex",md:"flex",sm:"none",base:"none"}} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
+            <VStack style={{backgroundColor:"#E0E4FF"}} display={{"2xl":"flex",xl:"flex",lg:"flex",md:"flex",sm:"none",base:"none"}} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
                 <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
                     <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
                     <Flex width={["70%","70%","65%","60%","50%"]} justifyContent={"space-between"} alignItems={'center'} color="purple.500" fontWeight="bold">
@@ -28,17 +34,17 @@ const Header = () => {
                         <Text _hover={{cursor:"pointer"}} >PROJECTS</Text>
                         <Text _hover={{cursor:"pointer"}} >CONTACT</Text>
                         <Button _hover={{cursor:"pointer"}}  as={'b'}><Flex alignItems={'center'} gap="1">RESUME <FaArrowAltCircleDown/></Flex></Button>
-                        <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
+                        <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
                     </Flex>
                 </Flex>
             </VStack>
-            <VStack display={{"2xl":"none",xl:"none",lg:"none",md:"none",sm:"flex",base:"flex"}} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
+            <VStack style={{backgroundColor:"#E0E4FF"}} display={{"2xl":"none",xl:"none",lg:"none",md:"none",sm:"flex",base:"flex"}} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
                 <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
                     <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
                     <Flex w="100px" color="purple.500">
                     <Button onClick={onOpen}><FaBars/></Button>
                     <Spacer></Spacer>
-                    <IconButton color="purple.500" icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
+                    <IconButton color="purple.500" icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
                     </Flex>
                 </Flex>
             </VStack>
@@ -49,7 +55,7 @@ const Header = () => {
         onClose={onClose}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent size={"xs"}>
           <DrawerCloseButton />
           <Box p="40px" color="#805AD5">
             <Box m="5px" pl="10px"><Text _hover={{cursor:"pointer"}} as="b">HOME</Text></Box>
@@ -69,6 +75,7 @@ const Header = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      <About/>
         </>
     )
 }
