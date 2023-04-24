@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { ThemeContext } from "./context/Context";
 import AboutMe from "./components/AboutMe";
 import { Spacer } from "@chakra-ui/react";
+import TechnicalSkills from "./components/TechnicalSkills";
 function App() {
   const {darkmode}=useContext(ThemeContext)
   return <>
@@ -11,12 +12,14 @@ function App() {
       <Header/>
       <About/>
       <AboutMe/>
+      <TechnicalSkills/>
     </div>
     :
     <div className="App" style={{backgroundColor:`#E9D8FD`}}>
       <Header/>
       <About/>
       <AboutMe/>
+      <TechnicalSkills/>
     </div>}
   </>
 }
