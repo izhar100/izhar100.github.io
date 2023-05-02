@@ -9,8 +9,7 @@ import Context from './context/Context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
-    <ColorModeScript initialColorMode='light'></ColorModeScript>
-    <Context>
+     <Context>
     <App />
     </Context>
   </ChakraProvider>
