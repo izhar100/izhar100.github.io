@@ -19,6 +19,7 @@ import searchConsole from "../assets/images/searchconsole.svg"
 import seo from "../assets/images/seo-icon.png"
 import GitHubCalendar from 'react-github-calendar'
 import { FaCommentAlt,FaChild,FaPeopleCarry,FaUsers } from "react-icons/fa";
+import Projects from './Projects'
 const TechnicalSkills = () => {
     return (
         <>
@@ -116,23 +117,23 @@ const TechnicalSkills = () => {
                 <br />
                 <br />
                 <Box mt={"20px"} w={{ md: "80%", lg: "80%", xl: "80%", sm: "90%", base: "90%" }} m={"auto"}>
-                    <Grid w={"100%"} justifyContent={"space-between"} gridTemplateColumns={{ md: "repeat(4,1fr)", lg: "repeat(4,1fr)", xl: "repeat(4,1fr)", sm: "repeat(2,1fr)", base: "repeat(1,1fr)" }} gap={5} >
-                        <Box p={"40px"}>
-                            <Flex justifyContent={"center"}><FaCommentAlt size={"40px"}/></Flex>
+                    <Grid w={"100%"} justifyContent={"space-between"} gridTemplateColumns={{ md: "repeat(4,1fr)", lg: "repeat(4,1fr)", xl: "repeat(4,1fr)", sm: "repeat(2,1fr)", base: "repeat(2,1fr)" }} gap={5} >
+                        <Box p={"30px"}>
+                            <Flex justifyContent={"center"}><FaCommentAlt size={"30px"}/></Flex>
                             <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Communication</Text></Flex>
                         </Box>
-                        <Box p={"40px"}>
-                            <Flex justifyContent={"center"}><FaChild size={"40px"}/></Flex>
+                        <Box p={"30px"}>
+                            <Flex justifyContent={"center"}><FaChild size={"30px"}/></Flex>
                             <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Adaptibility</Text></Flex>
                             
                         </Box>
-                        <Box p={"40px"}>
-                            <Flex justifyContent={"center"}><FaPeopleCarry size={"40px"}/></Flex>
+                        <Box p={"30px"}>
+                            <Flex justifyContent={"center"}><FaPeopleCarry size={"30px"}/></Flex>
                             <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Team work</Text></Flex>
                            
                         </Box>
-                        <Box p={"40px"}>
-                            <Flex justifyContent={"center"}><FaUsers size={"40px"}/></Flex>
+                        <Box p={"30px"}>
+                            <Flex justifyContent={"center"}><FaUsers size={"30px"}/></Flex>
                             <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Leadership</Text></Flex>
                            
                         </Box>
@@ -142,29 +143,30 @@ const TechnicalSkills = () => {
             <br />
             <Box mt={"20px"} w={{ md: "80%", lg: "80%", xl: "80%", sm: "90%", base: "90%" }} m={"auto"}>
                     <Grid w={"100%"} justifyContent={"space-between"} gridTemplateColumns={{ md: "repeat(4,1fr)", lg: "repeat(4,1fr)", xl: "repeat(4,1fr)", sm: "repeat(2,1fr)", base: "repeat(1,1fr)" }} gap={5} >
-                        <Box border={"4px solid #805AD5"} p={"40px"} borderRadius={"10px"}>
+                        <Box border={"4px solid #805AD5"} boxShadow={"rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"} p={"40px"} borderRadius={"10px"}>
                             <Flex justifyContent={"center"}><Text as={"b"} fontSize={"20px"}>1200+</Text></Flex>
-                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Hours of coding</Text></Flex>
+                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "14px", base: "14px" }}>Hours of coding</Text></Flex>
                         </Box>
-                        <Box border={"4px solid #805AD5"} p={"40px"} borderRadius={"10px"}>
+                        <Box border={"4px solid #805AD5"} boxShadow={"rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"} p={"40px"} borderRadius={"10px"}>
                             <Flex justifyContent={"center"}><Text as={"b"} fontSize={"20px"}>500+</Text></Flex>
-                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Problem solved</Text></Flex>
+                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "14px", base: "14px" }}>Problem solved</Text></Flex>
                             
                         </Box>
-                        <Box border={"4px solid #805AD5"} p={"40px"} borderRadius={"10px"}>
+                        <Box border={"4px solid #805AD5"} boxShadow={"rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"} p={"40px"} borderRadius={"10px"}>
                             <Flex justifyContent={"center"}><Text as={"b"} fontSize={"20px"}>200+</Text></Flex>
-                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Soft Skill Session</Text></Flex>
+                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "14px", base: "14px" }}>Soft Skill Session</Text></Flex>
                            
                         </Box>
-                        <Box border={"4px solid #805AD5"} p={"40px"} borderRadius={"10px"}>
+                        <Box border={"4px solid #805AD5"} boxShadow={"rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"} p={"40px"} borderRadius={"10px"}>
                             <Flex justifyContent={"center"}><Text as={"b"} fontSize={"20px"}>10+</Text></Flex>
-                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "15px", base: "15px" }}>Projects Built</Text></Flex>
+                            <Flex justifyContent={"center"}><Text fontSize={{ md: "18px", lg: "18px", xl: "18px", sm: "14px", base: "14px" }}>Projects Built</Text></Flex>
                            
                         </Box>
                     </Grid>
                 </Box>
                 <br />
                 <br />
+                <Projects/>
         </>
     )
 }
