@@ -21,8 +21,8 @@ const Projects = () => {
         setImage2(thirdStep1)
     }
   return (
-    <div>
-        <Box id='project' w={{ md: "80%", lg: "80%", xl: "80%", sm: "90%", base: "90%" }} m={"auto"}>
+    <div className='projects' id='projects'>
+        <Box w={{ md: "80%", lg: "80%", xl: "80%", sm: "90%", base: "90%" }} m={"auto"}>
         <Text color={"purple.500"}  fontSize={"4xl"} fontWeight={"bold"} textAlign={"center"}>Projects</Text>
         <br />
         <Flex gap={10} flexDirection={{ md: "row", lg: "row", xl: "row", sm: "column", base: "column" }}>

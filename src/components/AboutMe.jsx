@@ -5,7 +5,7 @@ import {FaInstagramSquare,FaLinkedin,FaTwitterSquare} from "react-icons/fa";
 const AboutMe = () => {
   return (
     <>
-    <Box id='about' pt={"50px"} w={{md:"50%",lg:"50%",xl:"50%",sm:"90%",base:"90%"}} m={"auto"} textAlign={"center"}>
+    <Box className='about' id='about' pt={"50px"} w={{md:"50%",lg:"50%",xl:"50%",sm:"90%",base:"90%"}} m={"auto"} textAlign={"center"}>
         <Text color={"purple.500"} fontSize={"4xl"} fontWeight={"bold"}>About Me</Text>
         <Text as="b" color="gray">@izhar100</Text>
         <Text mt={"20px"} textAlign={"justify"}>An ambitious developer with the ability to write neat and understandable code, looking forward to join a team with whom communication and teamwork are paramount. Certified in MERN Stack technologies. Seeking to further improve in building the web applications as the future full stack developer at Atmospheric Solutions.</Text>
