@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.7b677e75.js",
+    "main.js": "/static/js/main.30539fb0.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/apkamarket.png": "/static/media/apkamarket.ab1fb032dc93c71c3951.png",
     "static/media/villacart2.png": "/static/media/villacart2.cc30d47c9e2b20b77a1a.png",
@@ -12,7 +12,7 @@
     "static/media/indianEgle.jpg": "/static/media/indianEgle.aa46162e611afc2b85bf.jpg",
     "static/media/chakra-ui.png": "/static/media/chakra-ui.e4cb472ccaabf22affba.png",
     "static/media/React.png": "/static/media/React.b651ed8f9c447ce5a7ae.png",
-    "static/media/Ezhar-Ashraf-Resume.pdf": "/static/media/Ezhar-Ashraf-Resume.8a2bdcdb08abf6dc9e29.pdf",
+    "static/media/Ezhar-Ashraf-Resume.pdf": "/static/media/Ezhar-Ashraf-Resume.f0829bf1211c3bdff312.pdf",
     "static/media/html.png": "/static/media/html.fb627e76c05a9a6c7444.png",
     "static/media/css.png": "/static/media/css.ea63097553654f07d95c.png",
     "static/media/redux.png": "/static/media/redux.b426d97de12d4dab1c06.png",
@@ -25,10 +25,10 @@
     "static/media/searchconsole.svg": "/static/media/searchconsole.196b662a47ecb28b71737f8af03ecd3e.svg",
     "static/media/googleAnalytics.svg": "/static/media/googleAnalytics.6d1070cb29b19e7c33b00b95fd399b48.svg",
     "index.html": "/index.html",
-    "main.7b677e75.js.map": "/static/js/main.7b677e75.js.map",
+    "main.30539fb0.js.map": "/static/js/main.30539fb0.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7b677e75.js"
+    "static/js/main.30539fb0.js"
   ]
 }
