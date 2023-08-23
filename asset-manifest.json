@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.764ad389.js",
+    "main.js": "/static/js/main.23a58d13.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/apkamarket.png": "/static/media/apkamarket.ab1fb032dc93c71c3951.png",
     "static/media/villacart2.png": "/static/media/villacart2.cc30d47c9e2b20b77a1a.png",
@@ -25,10 +25,10 @@
     "static/media/searchconsole.svg": "/static/media/searchconsole.196b662a47ecb28b71737f8af03ecd3e.svg",
     "static/media/googleAnalytics.svg": "/static/media/googleAnalytics.6d1070cb29b19e7c33b00b95fd399b48.svg",
     "index.html": "/index.html",
-    "main.764ad389.js.map": "/static/js/main.764ad389.js.map",
+    "main.23a58d13.js.map": "/static/js/main.23a58d13.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.764ad389.js"
+    "static/js/main.23a58d13.js"
   ]
 }
