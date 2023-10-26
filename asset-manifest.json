@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.js": "/static/js/main.c8136a40.js",
+    "main.js": "/static/js/main.8563bb80.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/meesho1.png": "/static/media/meesho1.a314ff4e0b0de2638c60.png",
+    "static/media/meesho2.png": "/static/media/meesho2.a562ef016a56ca8893d6.png",
     "static/media/apkamarket.png": "/static/media/apkamarket.ab1fb032dc93c71c3951.png",
     "static/media/villacart2.png": "/static/media/villacart2.cc30d47c9e2b20b77a1a.png",
     "static/media/ThirdStep.png": "/static/media/ThirdStep.e902b6284248d683c968.png",
@@ -25,10 +27,10 @@
     "static/media/searchconsole.svg": "/static/media/searchconsole.196b662a47ecb28b71737f8af03ecd3e.svg",
     "static/media/googleAnalytics.svg": "/static/media/googleAnalytics.6d1070cb29b19e7c33b00b95fd399b48.svg",
     "index.html": "/index.html",
-    "main.c8136a40.js.map": "/static/js/main.c8136a40.js.map",
+    "main.8563bb80.js.map": "/static/js/main.8563bb80.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c8136a40.js"
+    "static/js/main.8563bb80.js"
   ]
 }
