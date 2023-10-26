@@ -1,0 +1,2 @@
+.image-circle{-webkit-animation:spin 10s linear infinite;animation:spin 10s linear infinite;border-color:#b0f #b0f #0d00ff #0d00ff;border-radius:50%;border-style:solid dashed;border-width:2px;padding:1px}.image-circle img{animation:spin 10s linear infinite reverse;border-radius:50%}@-webkit-keyframes spin{to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+/*# sourceMappingURL=main.c8523c76.css.map*/
