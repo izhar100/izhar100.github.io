@@ -1,98 +1,118 @@
-import { VStack, Flex, Heading, IconButton, useColorMode, Text, Button, Spacer, useDisclosure } from '@chakra-ui/react'
+import { VStack, Flex, Heading, IconButton, useColorMode, Text, Button, Spacer, Image, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import {
-  Drawer,
-  DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
   Box,
 } from '@chakra-ui/react'
 import React, { useContext } from 'react'
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin, FaArrowAltCircleDown, FaBars } from "react-icons/fa"
-import About from './About'
+import { FaSun, FaMoon, FaArrowAltCircleDown } from "react-icons/fa"
 import { ThemeContext } from '../context/Context'
 import { Link } from 'react-scroll';
+import myresume from "../assets/images/Ezhar-Ashraf-Resume.pdf"
+import { HamburgerIcon } from '@chakra-ui/icons'
 const Header = () => {
   const { maintainTheme } = useContext(ThemeContext)
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const firstField = React.useRef()
   const isDark = colorMode === "dark"
   const handleClick = () => {
     toggleColorMode()
     maintainTheme(isDark)
   }
-  const handleAboutClick=()=>{
-    window.location.href="#about"
-  }
-  const handleHomeClick = () => {
-    window.location.href = "/"
-  }
   return (
     <>
-      <VStack style={{ backgroundColor: "#E0E4FF", position: "fixed", top: "0px", width: "100%" }} display={{ "2xl": "flex", xl: "flex", lg: "flex", md: "flex", sm: "none", base: "none" }} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
-        <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
-          <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
-          <Flex id='nav-menu' width={["70%", "70%", "65%", "60%", "50%"]} justifyContent={"space-between"} alignItems={'center'} color="purple.500" fontWeight="bold">
-            <Link to={"/"}><Text _hover={{ cursor: "pointer" }} id='home' onClick={handleHomeClick}>HOME</Text></Link>
-            <Link className="nav-link about"
-              to="about"
-              smooth={true}
-              duration={500}
-              offset={-70}><Text _hover={{ cursor: "pointer" }}>ABOUT ME</Text></Link>
-            <Link Link className="nav-link skills"
-              to="skills"
-              smooth={true}
-              duration={500}
-              offset={-70}><Text _hover={{ cursor: "pointer" }}>SKILLS</Text></Link>
-            <Link Link className="nav-link projects"
-              to="projects"
-              smooth={true}
-              duration={800}
-              offset={-70}><Text _hover={{ cursor: "pointer" }}>PROJECTS</Text></Link>
-            <Text _hover={{ cursor: "pointer" }} id='contact'>CONTACT</Text>
-            <a href="https://drive.google.com/file/d/1qy06lYUfPUNwB1aZ8nCxTd224rMdg3ps/view?usp=sharing" target='_black'><Button id="resume" _hover={{ cursor: "pointer" }} as={'b'}><Flex alignItems={'center'} gap="1">RESUME <FaArrowAltCircleDown /></Flex></Button></a>
-            <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
+      <Box id='nav-menu'>
+        <VStack zIndex={1} style={{ backgroundColor: "#ffffff", position: "fixed", top: "0px", width: "100%" }} display={{ "2xl": "flex", xl: "flex", lg: "flex", md: "flex", sm: "none", base: "none" }} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
+          <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
+            <Heading ml="5" size="md" fontWeight="bold" color="purple.500"><Image src='https://avatars.githubusercontent.com/u/95142289?v=4' border={"3px solid #805AD5"} borderRadius={"full"} w={"40px"} /></Heading>
+            <Flex width={["70%", "70%", "65%", "60%", "50%"]} justifyContent={"space-between"} alignItems={'center'} color="purple.500" fontWeight="bold">
+              <Link to={"/"}><Text className="nav-link home" _hover={{ cursor: "pointer",borderBottom:"3px solid #dd00ff" }} id='home'>HOME</Text></Link>
+              <Link className="nav-link about"
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-70}><Text _hover={{ cursor: "pointer", borderBottom:"3px solid #dd00ff" }}>ABOUT ME</Text></Link>
+              <Link className="nav-link skills"
+                to="skills"
+                smooth={true}
+                duration={500}
+                offset={-70}><Text _hover={{ cursor: "pointer",borderBottom:"3px solid #dd00ff" }}>SKILLS</Text></Link>
+              <Link className="nav-link projects"
+                to="projects"
+                smooth={true}
+                duration={800}
+                offset={-70}><Text _hover={{ cursor: "pointer",borderBottom:"3px solid #dd00ff" }}>PROJECTS</Text></Link>
+              <Link className="nav-link contact"
+                to="contact"
+                smooth={true}
+                duration={800}
+                offset={-70}><Text _hover={{ cursor: "pointer",borderBottom:"3px solid #dd00ff" }}>CONTACT</Text></Link>
+              <a id="resume-link-1" className='nav-link resume' href={myresume} download={"Ezhar-Ashraf-Resume.pdf"} onClick={() => {
+                window.open("https://drive.google.com/file/d/1qy06lYUfPUNwB1aZ8nCxTd224rMdg3ps/view?usp=sharing")
+              }}><Button id="resume-button-1" _hover={{ cursor: "pointer",bgColor:"#805AD5",color:"white" }} as={'b'}><Flex alignItems={'center'} gap="1">RESUME <FaArrowAltCircleDown /></Flex></Button></a>
+              <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
+            </Flex>
           </Flex>
-        </Flex>
-      </VStack>
-      <VStack style={{ backgroundColor: "#E0E4FF", position: "fixed", top: "0px", width: "100%" }} display={{ "2xl": "none", xl: "none", lg: "none", md: "none", sm: "flex", base: "flex" }} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
-        <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
-          <Heading ml="5" size="md" fontWeight="bold" color="purple.500">Ezhar's logo</Heading>
-          <Flex w="100px" color="purple.500">
-            <Button onClick={onOpen}><FaBars /></Button>
-            <Spacer></Spacer>
-            <IconButton color="purple.500" icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
+        </VStack>
+        <VStack zIndex={1} style={{ backgroundColor: "#ffffff", position: "fixed", top: "0px", width: "100%" }} display={{ "2xl": "none", xl: "none", lg: "none", md: "none", sm: "flex", base: "flex" }} padding={3} boxShadow={"rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"}>
+          <Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
+            <Heading ml="5" size="md" fontWeight="bold" color="purple.500"><Image src='https://avatars.githubusercontent.com/u/95142289?v=4' borderRadius={"full"} w={"40px"} /></Heading>
+            <Flex w="100px" color="purple.500">
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  aria-label='Options'
+                  icon={<HamburgerIcon color={"purple.500"} />}
+                />
+                <MenuList>
+                  <MenuItem>
+                  {/* className="nav-link home" */}
+                  <Link to={"/"}><Text  _hover={{ cursor: "pointer" }} id='home'>HOME</Text></Link>
+                  </MenuItem>
+                  {/* className="nav-link about" */}
+                  <MenuItem>
+                    <Link 
+                      to="about"
+                      smooth={true}
+                      duration={500}
+                      offset={-70}><Text _hover={{ cursor: "pointer" }}>ABOUT ME</Text></Link>
+                  </MenuItem>
+                  {/* className="nav-link skills" */}
+                  <MenuItem>
+                    <Link
+                      to="skills"
+                      smooth={true}
+                      duration={500}
+                      offset={-70}><Text _hover={{ cursor: "pointer" }}>SKILLS</Text></Link>
+                  </MenuItem>
+                  {/* className="nav-link projects" */}
+                  <MenuItem>
+                    <Link
+                      to="projects"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}><Text _hover={{ cursor: "pointer" }}>PROJECTS</Text></Link>
+                  </MenuItem>
+                  <MenuItem>
+                  {/* className="nav-link contact" */}
+                    <Link 
+                      to="contact"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}><Text _hover={{ cursor: "pointer" }}>CONTACT</Text></Link>
+                  </MenuItem>
+                  <MenuItem>
+                  {/* id="resume-link-1" className='nav-link resume' */}
+                    <a  href={myresume} download={"Ezhar-Ashraf-Resume.pdf"} onClick={() => {
+                      window.open("https://drive.google.com/file/d/1qy06lYUfPUNwB1aZ8nCxTd224rMdg3ps/view?usp=sharing")
+                    }} ><Box id="resume"><Flex _hover={{ cursor: "pointer" }} alignItems={'center'} gap="1"><Text >RESUME</Text> <FaArrowAltCircleDown /></Flex></Box></a>
+                    {/* id="resume-button-1" */}
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+              <Spacer></Spacer>
+              <IconButton color="purple.500" icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={handleClick}></IconButton>
+            </Flex>
           </Flex>
-        </Flex>
-      </VStack>
-      <Drawer
-        isOpen={isOpen}
-        placement='right'
-        initialFocusRef={firstField}
-        onClose={onClose}
-      >
-        <DrawerOverlay />
-        <DrawerContent size={"xs"}>
-          <DrawerCloseButton />
-          <Box p="40px" color="#805AD5">
-            <Box m="5px" pl="10px"><Text _hover={{ cursor: "pointer" }} id='home' as="b">HOME</Text></Box>
-            <hr />
-            <Box m="5px" pl="10px"><Text _hover={{ cursor: "pointer" }} id='about' as="b" onClick={handleAboutClick}>ABOUT ME</Text></Box>
-            <hr />
-            <Box m="5px" pl="10px"><Text _hover={{ cursor: "pointer" }} id='skills' as="b">SKILLS</Text></Box>
-            <hr />
-            <Box m="5px" pl="10px"><Text _hover={{ cursor: "pointer" }} id='projects' as="b">PROJECTS</Text></Box>
-            <hr />
-            <Box m="5px" pl="10px"><Text _hover={{ cursor: "pointer" }} id='contact' as="b">CONTACT</Text></Box>
-            <hr />
-            <a href="https://drive.google.com/file/d/1qy06lYUfPUNwB1aZ8nCxTd224rMdg3ps/view?usp=sharing" target='_black'><Box id="resume" m="5px" pl="10px"><Flex _hover={{ cursor: "pointer" }} alignItems={'center'} gap="1"><Text as="b">RESUME</Text> <FaArrowAltCircleDown /></Flex></Box></a>
-            <hr />
-          </Box>
-          <DrawerBody>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+        </VStack>
+      </Box>
     </>
   )
 }
