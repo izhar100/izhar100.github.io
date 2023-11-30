@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.c8523c76.css",
-    "main.js": "/static/js/main.6e0cd2cc.js",
+    "main.js": "/static/js/main.d33986a4.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/meesho1.png": "/static/media/meesho1.a314ff4e0b0de2638c60.png",
     "static/media/meesho2.png": "/static/media/meesho2.a562ef016a56ca8893d6.png",
+    "static/media/threadsclone1.png": "/static/media/threadsclone1.ea909d825a13405d8966.png",
+    "static/media/threadsclone2.png": "/static/media/threadsclone2.6a9356e6754c04a88f92.png",
     "static/media/apkamarket.png": "/static/media/apkamarket.ab1fb032dc93c71c3951.png",
     "static/media/villacart2.png": "/static/media/villacart2.cc30d47c9e2b20b77a1a.png",
     "static/media/ThirdStep.png": "/static/media/ThirdStep.e902b6284248d683c968.png",
@@ -29,11 +31,11 @@
     "index.html": "/index.html",
     "static/media/googleAnalytics.svg": "/static/media/googleAnalytics.6d1070cb29b19e7c33b00b95fd399b48.svg",
     "main.c8523c76.css.map": "/static/css/main.c8523c76.css.map",
-    "main.6e0cd2cc.js.map": "/static/js/main.6e0cd2cc.js.map",
+    "main.d33986a4.js.map": "/static/js/main.d33986a4.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8523c76.css",
-    "static/js/main.6e0cd2cc.js"
+    "static/js/main.d33986a4.js"
   ]
 }
